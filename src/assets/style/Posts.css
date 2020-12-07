@@ -1,0 +1,36 @@
+.posts {
+    display: flex;
+    background-color: #fff;
+}
+
+.posts-page {
+    margin: 0 auto;
+    padding: 2%;
+    min-width: 80vw;
+}
+
+.page-title {
+    border: solid rgb(62, 66, 77) 1px;
+    height: 5rem!important;
+    text-align: left;
+    margin-bottom: 2rem;
+    box-shadow: 10px 5px 5px gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-title-text {
+    padding: 1rem;
+}
+
+.btn-title {
+    margin: 1rem;
+}
+
+.posts-search {
+    margin-bottom: 2rem;
+}
+
+.ag-theme-alpine {
+    font-size: 18px;
+}

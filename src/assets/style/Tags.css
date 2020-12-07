@@ -1,0 +1,22 @@
+.tags {
+    display: flex;
+    background-color: #fff;
+}
+
+.tags-page {
+    margin: 0 auto;
+    padding: 2%;
+    min-width: 80vw;
+}
+
+.page-title {
+    border: solid rgb(62, 66, 77) 1px;
+    height: 5rem!important;
+    text-align: left;
+    margin-bottom: 1rem;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.page-title-text {
+    padding: 1rem;
+}
