@@ -21,7 +21,18 @@ export const Startup = () => {
                                     <button type="submit" className="btn btn-secondary btn-title">Add</button>
                                 </div>
                                 <div className="startup-list-content">
-
+                                    <ol>
+                                        <li className="startup-list-content-item">
+                                            <span className="startup-list-content-number">1.</span>
+                                            <i className="fa fa-trash startup-list-content-icon"></i>
+                                            <i className="fa fa-arrow-up startup-list-content-icon"></i>
+                                            <i className="fa fa-arrow-down startup-list-content-icon"></i>
+                                            <div>
+                                                TEODORA
+                                            </div>
+                                        </li>
+                                        <hr></hr>
+                                    </ol>
                                 </div>
                             </div>
                             <div className="startup-row">
@@ -30,7 +41,18 @@ export const Startup = () => {
                                     <button type="submit" className="btn btn-secondary btn-title">Add</button>
                                 </div>
                                 <div className="startup-list-content">
-
+                                    <ol>
+                                        <li className="startup-list-content-item">
+                                            <span className="startup-list-content-number">1.</span>
+                                            <i className="fa fa-trash startup-list-content-icon"></i>
+                                            <i className="fa fa-arrow-up startup-list-content-icon"></i>
+                                            <i className="fa fa-arrow-down startup-list-content-icon"></i>
+                                            <div>
+                                                TEODORA
+                                            </div>
+                                        </li>
+                                        <hr></hr>
+                                    </ol>
                                 </div>
                             </div>
                             <div className="startup-row">
@@ -39,7 +61,18 @@ export const Startup = () => {
                                     <button type="submit" className="btn btn-secondary btn-title">Add</button>
                                 </div>
                                 <div className="startup-list-content">
-
+                                    <ol>
+                                        <li className="startup-list-content-item">
+                                            <span className="startup-list-content-number">1.</span>
+                                            <i className="fa fa-trash startup-list-content-icon"></i>
+                                            <i className="fa fa-arrow-up startup-list-content-icon"></i>
+                                            <i className="fa fa-arrow-down startup-list-content-icon"></i>
+                                            <div>
+                                                TEODORA
+                                            </div>
+                                        </li>
+                                        <hr></hr>
+                                    </ol>
                                 </div>
                             </div>
                             

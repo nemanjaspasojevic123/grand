@@ -12,6 +12,7 @@ import { Dashboard } from './components/Dashboard';
 import { LiveTv } from './components/LiveTv';
 import { Login } from './components/Login';
 import { MediaCenter } from './components/MediaCenter';
+import { NewMediaItem } from './components/NewMediaItem';
 import { NewPost } from './components/NewPost';
 import { Notifications } from './components/Notifications';
 import { OurTeam } from './components/OurTeam';
@@ -44,6 +45,7 @@ function App() {
           <Route component={Startup} exact path="/startup"></Route>
           <Route component={Tags} exact path="/tags"></Route>
           <Route component={MediaCenter} exact path="/media-center"></Route>
+          <Route component={NewMediaItem} exact path="/new-media-item"></Route>
           <Route component={AdBanners} exact path="/banners-media-center"></Route>
           <Route component={Artists} exact path="/artists"></Route>
           <Route component={Tubers} exact path="/tubers"></Route>
