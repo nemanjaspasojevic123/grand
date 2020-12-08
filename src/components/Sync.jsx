@@ -53,7 +53,7 @@ export const Sync = () => {
                                     <h5>Live TV Link/ID</h5>
                                     <input type="text" className="form-control col" placeholder="http://www.youtube.com"/>
                                 </div>
-                                <button type="submit" className="btn btn-primary">Submit</button>
+                                <button type="submit" className="btn btn-secondary">Submit</button>
                             </form>
                         </div>
                     </div>

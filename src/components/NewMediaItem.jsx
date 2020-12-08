@@ -20,10 +20,12 @@ export const NewMediaItem = () => {
                                 <label className="new-media-item-content-label">Tags</label>
                                 <input type="text" className="form-control posts-search" />
                                 <label className="new-media-item-content-label">Choose image</label>
-                                <img src={dummy_img} alt="Tis is dummy_img" style={{height: 300}}></img>
+                                <img src={dummy_img} alt="Tis is dummy_img" style={{height: 200}}></img>
                                 <button type="submit" className="btn btn-secondary btn-title">Add Image</button>
-                                <label className="new-media-item-content-label">Caption</label>
-                                <textarea className="form-control" placeholder="This is image caption..."></textarea>
+                                <div>
+                                    <label className="new-media-item-content-label">Caption</label>
+                                    <textarea className="form-control" placeholder="This is image caption..."></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -20,3 +20,8 @@
 .page-title-text {
     padding: 1rem;
 }
+
+.grid-btn {
+    cursor: pointer;
+    border-radius: 10%;
+}

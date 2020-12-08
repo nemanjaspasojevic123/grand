@@ -24,12 +24,12 @@ const [rowData, setRowData] = useState([
 
 const columnDefs = [
     {headerName: "Image", field: "image", sortable: true, resizable: true},
-    {headerName: "Tags", field: "tags", sortable: true, resizable: true, filter: true},
+    {headerName: "Tags", field: "tags", sortable: true, resizable: true, filter: true, minWidth: 400},
     {headerName: "Edit Tags", field: "edit_tags", sortable: true, resizable: true, cellRendererFramework: (params) => {
-      return  <div><i className="fa fa-edit"></i><button className="btn-secondary">Edit</button></div>
+      return  <div><button className="btn-secondary"><i className="fa fa-edit"></i> Edit</button></div>
     }},
     {headerName: "Delete", field: "delete", sortable: true, resizable: true, cellRendererFramework: (params) => {
-      return  <div><i className="fa fa-trash"></i><button onClick={()=>handleDelete(params)} className="btn-secondary">Delete</button></div>
+      return  <div><button onClick={()=>handleDelete(params)} className="btn-secondary"><i className="fa fa-trash"></i> Delete</button></div>
     }},
 ];
 
