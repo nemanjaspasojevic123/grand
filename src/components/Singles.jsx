@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 export const Singles = () => {
 
 
-    // const [gridApi, setGridApi] = useState(null);
+// const [gridApi, setGridApi] = useState(null);
 // const [gridColumnApi, setGridColumnApi] = useState(null);
 
 const handleDelete = (params) => {
@@ -25,8 +25,8 @@ const [rowData, setRowData] = useState([
 
 const columnDefs = [
     {headerName: "Image", field: "image", sortable: true, resizable: true},
-    {headerName: "UPC", field: "status", sortable: true, resizable: true, filter: true},
-    {headerName: "Status", field: "upc", sortable: true, resizable: true, filter: true},
+    {headerName: "UPC", field: "upc", sortable: true, resizable: true, filter: true},
+    {headerName: "Status", field: "status", sortable: true, resizable: true, filter: true},
     {headerName: "* Sort", field: "sort", sortable: true, resizable: true, filter: true, editable: true},
     {headerName: "Artist", field: "artist", sortable: true, resizable: true, filter: true},
     {headerName: "Title", field: "title", sortable: true, resizable: true, filter: true},
@@ -50,11 +50,19 @@ const columnDefs = [
                     <div className="singles-page">
                         <div className="page-title">
                             <h1 className="page-title-text">Singles</h1>
-                            <button type="submit" className="btn btn-secondary btn-title">
-                                <Link to="/new-singles">
-                                    <div>Add New</div>
-                                </Link>
-                            </button>
+                            <div>
+                                <button type="submit" className="btn btn-secondary btn-title">
+                                    <div>Update Spotovi</div>
+                                </button>
+                                <button type="submit" className="btn btn-secondary btn-title">
+                                    <div>Update Views</div>
+                                </button>
+                                <button type="submit" className="btn btn-secondary btn-title">
+                                    <Link to="/new-singles">
+                                        <div>Add New</div>
+                                    </Link>
+                                </button>
+                            </div>
                         </div>
                         <div className="singles-content">
                             <label>Dubble click on cell with asterisk (*) to edit it.</label>
