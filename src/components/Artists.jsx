@@ -17,9 +17,9 @@ const handleDelete = (params) => {
 }
 // eslint-disable-next-line
 const [rowData, setRowData] = useState([
-    {image: "img1", sort: "1", artist: "NIKOLIJA", custom_status: "false", creator_status: "false", edit_tags: "Edit", delete: "Delete"},
-    {image: "img2", sort: "2", artist: "RELJA", custom_status: "false", creator_status: "false", edit_tags: "Edit", delete: "Delete"},
-    {image: "img3", sort: "3", artist: "MC STOJAN", custom_status: "false", creator_status: "false", edit_tags: "Edit", delete: "Delete"}
+    {image: "img1", sort: "1", artist: "NIKOLIJA", custom_status: "false", creator_status: "false", edit: "Edit", delete: "Delete"},
+    {image: "img2", sort: "2", artist: "RELJA", custom_status: "false", creator_status: "false", edit: "Edit", delete: "Delete"},
+    {image: "img3", sort: "3", artist: "MC STOJAN", custom_status: "false", creator_status: "false", edit: "Edit", delete: "Delete"}
 ]);
 
 const columnDefs = [
@@ -30,7 +30,7 @@ const columnDefs = [
     {headerName: "Custom Category", field: "custom_category", sortable: true, resizable: true, checkboxSelection: true},
     {headerName: "Creator/Status", field: "creator_status", sortable: true, resizable: true, filter: true},
     {headerName: "Creator", field: "creator", sortable: true, resizable: true, checkboxSelection: true},
-    {headerName: "Edit Tags", field: "edit_tags", sortable: true, resizable: true, cellRendererFramework: (params) => {
+    {headerName: "Edit", field: "edit", sortable: true, resizable: true, cellRendererFramework: (params) => {
       return  <div><button className="btn-secondary"><i className="fa fa-edit"></i> Edit</button></div>
     }},
     {headerName: "Delete", field: "delete", sortable: true, resizable: true, cellRendererFramework: (params) => {

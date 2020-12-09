@@ -1,9 +1,9 @@
-.users {
+.new-cms-user {
     display: flex;
     background-color: #fff;
 }
 
-.users-page {
+.new-cms-user-page {
     margin: 0 auto;
     padding: 2%;
     min-width: 80vw;
@@ -19,8 +19,4 @@
 
 .page-title-text {
     padding: 1rem;
-}
-
-.users-btn {
-    margin: 1rem 0;
 }

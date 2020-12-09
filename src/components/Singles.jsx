@@ -18,9 +18,9 @@ const handleDelete = (params) => {
 }
 // eslint-disable-next-line
 const [rowData, setRowData] = useState([
-    {image: "img1", upc: "56489725", status: "AUTORIZED", sort: "1", artist: "NIKOLIJA", title: "YIN & YUNG", youtube_id: "9xehHNkahiw", views: "743498", release_date: "04/04/2019", edit_tags: "Edit", delete: "Delete"},
-    {image: "img2", upc: "56489725", status: "AUTORIZED", sort: "2", artist: "RELJA", title: "NIJE LAKO BITI JA", youtube_id: "9xehHNkahiw", views: "904578", release_date: "07/04/2020", edit_tags: "Edit", delete: "Delete"},
-    {image: "img3", upc: "56489725", status: "AUTORIZED", sort: "3", artist: "MC STOJAN", title: "UDAHNI DUBOKO", youtube_id: "9xehHNkahiw", views: "634782", release_date: "24/04/2019", edit_tags: "Edit", delete: "Delete"}
+    {image: "img1", upc: "56489725", status: "AUTORIZED", sort: "1", artist: "NIKOLIJA", title: "YIN & YUNG", youtube_id: "9xehHNkahiw", views: "743498", release_date: "04/04/2019", edit: "Edit", delete: "Delete"},
+    {image: "img2", upc: "56489725", status: "AUTORIZED", sort: "2", artist: "RELJA", title: "NIJE LAKO BITI JA", youtube_id: "9xehHNkahiw", views: "904578", release_date: "07/04/2020", edit: "Edit", delete: "Delete"},
+    {image: "img3", upc: "56489725", status: "AUTORIZED", sort: "3", artist: "MC STOJAN", title: "UDAHNI DUBOKO", youtube_id: "9xehHNkahiw", views: "634782", release_date: "24/04/2019", edit: "Edit", delete: "Delete"}
 ]);
 
 const columnDefs = [
@@ -34,7 +34,7 @@ const columnDefs = [
     {headerName: "Premiere", field: "premiere", sortable: true, resizable: true, checkboxSelection: true},
     {headerName: "Views", field: "views", sortable: true, resizable: true, filter: true},
     {headerName: "Release date", field: "release_date", sortable: true, resizable: true, filter: true},
-    {headerName: "Edit Tags", field: "edit_tags", sortable: true, resizable: true, cellRendererFramework: (params) => {
+    {headerName: "Edit", field: "edit", sortable: true, resizable: true, cellRendererFramework: (params) => {
       return  <div><button className="btn-secondary"><i className="fa fa-edit"></i> Edit</button></div>
     }},
     {headerName: "Delete", field: "delete", sortable: true, resizable: true, cellRendererFramework: (params) => {

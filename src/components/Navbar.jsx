@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/style/Navbar.css';
 import { Link } from 'react-router-dom';
 import grand_logo from '../assets/logos/Grand_TV_logo.png'
 
@@ -6,7 +7,7 @@ export const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-                <div className="container">
+                <div className="container nav-container">
                     <Link className="navbar-brand" to="/" >
                         <img src={grand_logo} alt="no img" width="130px" height="40px"/>
                     </Link>

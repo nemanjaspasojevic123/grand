@@ -16,15 +16,15 @@ const handleDelete = (params) => {
 }
 // eslint-disable-next-line
 const [rowData, setRowData] = useState([
-    {tuber: "RUŽA RUPIĆ", playlist_id: "Playlist1", edit_tags: "Edit", delete: "Delete"},
-    {tuber: "JENNI MARTIN", playlist_id: "Playlist2", edit_tags: "Edit", delete: "Delete"},
-    {tuber: "ANDRIJA JO", playlist_id: "Playlist3", edit_tags: "Edit", delete: "Delete"}
+    {tuber: "RUŽA RUPIĆ", playlist_id: "Playlist1", edit: "Edit", delete: "Delete"},
+    {tuber: "JENNI MARTIN", playlist_id: "Playlist2", edit: "Edit", delete: "Delete"},
+    {tuber: "ANDRIJA JO", playlist_id: "Playlist3", edit: "Edit", delete: "Delete"}
 ]);
 
 const columnDefs = [
     {headerName: "Tuber", field: "tuber", sortable: true, resizable: true, filter: true, minWidth: 400},
     {headerName: "Playlist Id", field: "playlist_id", sortable: true, resizable: true, filter: true, minWidth: 400},
-    {headerName: "Edit Tags", field: "edit_tags", sortable: true, resizable: true, cellRendererFramework: (params) => {
+    {headerName: "Edit", field: "edit", sortable: true, resizable: true, cellRendererFramework: (params) => {
       return  <div><button className="btn-secondary"><i className="fa fa-edit"></i> Edit</button></div>
     }},
     {headerName: "Delete", field: "delete", sortable: true, resizable: true, cellRendererFramework: (params) => {
