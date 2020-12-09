@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../assets/style/MediaCenter.css';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import 'ag-grid-community/dist/styles/ag-theme-material.css';
 import { Navbar } from './Navbar';
 import { Sidedashbar } from './Sidedashbar';
 import { Link } from 'react-router-dom';
@@ -49,13 +49,13 @@ const columnDefs = [
                             </button>
                         </div>
                         <div className="media-center-content">
-                            <div className="ag-theme-alpine" style={ { height: 500, width: "100%" } }>
+                            <div className="ag-theme-material" style={ { height: 500, width: "100%" } }>
                                 <AgGridReact 
                                 defaultColDef={{
                                     floatingFilter: true,
-                                    pagination: true,
-                                    paginationAutoPageSize: true,
                                 }}
+                                pagination={true}
+                                paginationAutoPageSize={true}
                                 rowData={rowData}
                                 columnDefs={columnDefs}>
                                 </AgGridReact>

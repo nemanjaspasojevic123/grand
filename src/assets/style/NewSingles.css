@@ -1,9 +1,9 @@
-.banners-media-center {
+.new-singles {
     display: flex;
     background-color: #fff;
 }
 
-.banners-media-center-page {
+.new-singles-page {
     margin: 0 auto;
     padding: 2%;
     min-width: 80vw;
@@ -19,8 +19,4 @@
 
 .page-title-text {
     padding: 1rem;
-}
-
-.grid-btn {
-    cursor: pointer;
 }

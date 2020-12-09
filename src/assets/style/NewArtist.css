@@ -1,9 +1,9 @@
-.banners-media-center {
+.new-artist {
     display: flex;
     background-color: #fff;
 }
 
-.banners-media-center-page {
+.new-artist-page {
     margin: 0 auto;
     padding: 2%;
     min-width: 80vw;
@@ -21,6 +21,10 @@
     padding: 1rem;
 }
 
-.grid-btn {
-    cursor: pointer;
+.new-artist-checkbox {
+    margin: 1rem 0 1rem 1rem;
+}
+
+.new-artist-image {
+    margin-top: 1rem;
 }

@@ -58,7 +58,7 @@ export const Sidedashbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link to="/tubers" className="navLink">
-                                    <div className="nav-text"><i className="fas fa-youtube fa-lg"></i> Tubers</div>
+                                    <div className="nav-text"><i className="fa fa-youtube fa-lg"></i> Tubers</div>
                                 </Link>
                             </li>
                             <li className="nav-item">

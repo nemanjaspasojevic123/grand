@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../assets/style/Posts.css';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import 'ag-grid-community/dist/styles/ag-theme-material.css';
 import { Navbar } from './Navbar';
 import { Sidedashbar } from './Sidedashbar';
 import { Link } from 'react-router-dom';
@@ -45,13 +45,13 @@ export const Posts = () => {
                             <div>
                                 <input type="text" className="form-control posts-search col-6 col-sm-3" placeholder="Search for anything..."/>
                             </div>
-                            <div className="ag-theme-alpine" style={ { height: 500, width: "100%" } }>
+                            <div className="ag-theme-material" style={ { height: 500, width: "100%" } }>
                                 <AgGridReact 
                                 defaultColDef={{
                                     floatingFilter: true,
-                                    pagination: true,
-                                    paginationAutoPageSize: true,
                                 }}
+                                    pagination={true}
+                                    paginationAutoPageSize={true}
                                     rowData={rowData}
                                     columnDefs={columnDefs}>
                                 </AgGridReact>

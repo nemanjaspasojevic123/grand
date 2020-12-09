@@ -37,6 +37,7 @@
 .card-header {
     background-color: rgb(62, 66, 77);
     color: #fff;
+    text-align: center;
 }
 
 .card-header:hover {

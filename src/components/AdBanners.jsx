@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import '../assets/style/AdBanners.css';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import 'ag-grid-community/dist/styles/ag-theme-material.css';
 import { Navbar } from './Navbar';
 import { Sidedashbar } from './Sidedashbar';
 import { Link } from 'react-router-dom';
 
 export const AdBanners = () => {
 
-    // const [gridApi, setGridApi] = useState(null);
+// const [gridApi, setGridApi] = useState(null);
 // const [gridColumnApi, setGridColumnApi] = useState(null);
 
 const handleDelete = (params) => {
@@ -29,7 +29,7 @@ const columnDefs = [
       return  <div><button className="btn-secondary"><i className="fa fa-edit"></i> Edit</button></div>
     }},
     {headerName: "Delete", field: "delete", sortable: true, resizable: true, cellRendererFramework: (params) => {
-      return  <div><button onClick={()=>handleDelete(params)} className="btn-secondary grid-btn"><i className="fa fa-trash"></i> Delete</button></div>
+      return  <div className="grid-btn"><button onClick={()=>handleDelete(params)} className="btn-secondary"><i className="fa fa-trash"></i> Delete</button></div>
     }},
 ];
 
@@ -48,13 +48,13 @@ const columnDefs = [
                             </button>
                         </div>
                         <div className="banners-media-center-content">
-                            <div className="ag-theme-alpine" style={ { height: 500, width: "100%" } }>
+                            <div className="ag-theme-material" style={ { height: 500, width: "100%" } }>
                                 <AgGridReact 
                                 defaultColDef={{
                                     floatingFilter: true,
-                                    pagination: true,
-                                    paginationAutoPageSize: true,
                                 }}
+                                pagination={true}
+                                paginationAutoPageSize={true}
                                 rowData={rowData}
                                 columnDefs={columnDefs}>
                                 </AgGridReact>

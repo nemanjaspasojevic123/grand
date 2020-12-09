@@ -12,8 +12,10 @@ import { Dashboard } from './components/Dashboard';
 import { LiveTv } from './components/LiveTv';
 import { Login } from './components/Login';
 import { MediaCenter } from './components/MediaCenter';
+import { NewArtist } from './components/NewArtist';
 import { NewMediaItem } from './components/NewMediaItem';
 import { NewPost } from './components/NewPost';
+import { NewSingles } from './components/NewSingles';
 import { Notifications } from './components/Notifications';
 import { OurTeam } from './components/OurTeam';
 import { Playlists } from './components/Playlists';
@@ -48,8 +50,10 @@ function App() {
           <Route component={NewMediaItem} exact path="/new-media-item"></Route>
           <Route component={AdBanners} exact path="/banners-media-center"></Route>
           <Route component={Artists} exact path="/artists"></Route>
+          <Route component={NewArtist} exact path="/new-artist"></Route>
           <Route component={Tubers} exact path="/tubers"></Route>
           <Route component={Singles} exact path="/singles"></Route>
+          <Route component={NewSingles} exact path="/new-singles"></Route>
           <Route component={Albums} exact path="/albums"></Route>
           <Route component={Playlists} exact path="/playlists"></Route>
           <Route component={Categories} exact path="/custom-categories"></Route>
