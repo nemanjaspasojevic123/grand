@@ -65,8 +65,8 @@ const columnDefs = [
                             </div>
                         </div>
                         <div className="singles-content">
-                            <label>Dubble click on cell with asterisk (*) to edit it.</label>
                             <div className="ag-theme-material" style={ { height: 500, width: "100%" } }>
+                            <label>Dubble click on cell with asterisk (*) to edit it.</label>
                                 <AgGridReact 
                                 defaultColDef={{
                                     floatingFilter: true,
