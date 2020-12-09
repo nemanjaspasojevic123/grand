@@ -46,19 +46,17 @@ const columnDefs = [
                             <h1 className="page-title-text">Albums</h1>
                         </div>
                         <div className="albums-content">
-                            <div style={{ width: '100%', height: '100%' }}>
-                                <label>Dubble click on cell with asterisk (*) to edit it.</label>
-                                <div className="ag-theme-material" style={ { height: 500, width: "100%" } }>
-                                    <AgGridReact 
-                                    defaultColDef={{
-                                        floatingFilter: true,
-                                    }}
-                                    pagination={true}
-                                    paginationAutoPageSize={true}
-                                    rowData={rowData}
-                                    columnDefs={columnDefs}>
-                                    </AgGridReact>
-                                </div>
+                            <div className="ag-theme-material" style={ { height: 500, width: "100%" } }>
+                            <label>Dubble click on cell with asterisk (*) to edit it.</label>
+                                <AgGridReact 
+                                defaultColDef={{
+                                    floatingFilter: true,
+                                }}
+                                pagination={true}
+                                paginationAutoPageSize={true}
+                                rowData={rowData}
+                                columnDefs={columnDefs}>
+                                </AgGridReact>
                             </div>
                         </div>
                     </div>
