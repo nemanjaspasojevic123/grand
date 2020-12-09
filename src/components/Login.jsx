@@ -16,7 +16,7 @@ export const Login = () => {
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" className="form-control" id="exampleInputPassword1"/>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-secondary">Submit</button>
             </form>
         </div>
     )
