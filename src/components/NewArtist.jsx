@@ -36,7 +36,7 @@ export const NewArtist = () => {
                                     <input type="checkbox" className="form-check-input" />
                                     <label className="form-check-label">Artist is in custom category</label>
                                 </div>
-                                <div>
+                                <div className="form-group col-md-4">
                                     <label className="new-artist-content-label">Description</label>
                                     <textarea className="form-control" placeholder="Description"></textarea>
                                 </div>
