@@ -20,3 +20,19 @@
 .page-title-text {
     padding: 1rem;
 }
+
+.new-post-content {
+    display: flex;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.custom-select {
+    margin-bottom: 1rem;
+}
+
+.new-post-checkbox {
+    margin-left: 1rem;
+}
