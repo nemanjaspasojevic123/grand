@@ -42,11 +42,14 @@ const columnDefs = [
                     <div className="playlists-page">
                         <div className="page-title">
                             <h1 className="page-title-text">Playlists</h1>
-                            <button type="submit" className="btn btn-secondary btn-title">
-                                <Link to="/new-playlist">
-                                    <div>Add New</div>
-                                </Link>
-                            </button>
+                            <div>
+                                <button type="button" className="btn btn-secondary btn-title">Update Playlists</button>
+                                <button type="submit" className="btn btn-secondary btn-title">
+                                    <Link to="/new-playlist">
+                                        <div>Add New</div>
+                                    </Link>
+                                </button>
+                            </div>
                         </div>
                         <div className="playlists-content">
                             <div className="ag-theme-material" style={ { height: 500, width: "100%" } }>
