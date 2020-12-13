@@ -42,7 +42,7 @@ const columnDefs = [
                         <div className="page-title">
                             <h1 className="page-title-text">Ad Banners Media Center</h1>
                             <button type="submit" className="btn btn-secondary btn-title">
-                                <Link to="/new-media-item">
+                                <Link to="/new-banner-media-center">
                                     <div>Add New</div>
                                 </Link>
                             </button>

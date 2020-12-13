@@ -37,6 +37,7 @@ import { Tubers } from './components/Tubers';
 import { Users } from './components/Users';
 import { NewCaustomCategories } from './components/NewCustomCategories';
 import { NewRole } from './components/NewRole';
+import { NewBanner } from './components/NewBanner';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
           <Route component={MediaCenter} exact path="/media-center"></Route>
           <Route component={NewMediaItem} exact path="/new-media-item"></Route>
           <Route component={AdBanners} exact path="/banners-media-center"></Route>
+          <Route component={NewBanner} exact path="/new-banner-media-center"></Route>
           <Route component={Artists} exact path="/artists"></Route>
           <Route component={NewArtist} exact path="/new-artist"></Route>
           <Route component={Tubers} exact path="/tubers"></Route>

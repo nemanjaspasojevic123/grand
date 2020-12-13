@@ -16,6 +16,10 @@ export const NewPost = () => {
                     <div className="new-post-page">
                         <div className="page-title">
                             <h1 className="page-title-text">New Post</h1>
+                            <div>
+                            <button type="button" className="btn btn-secondary btn-title">Save Draft</button>
+                            <button type="button" className="btn btn-secondary btn-title">Create</button>
+                            </div>
                         </div>
                         <div className="new-post-content">
                             <div className="form-group col-md-9">
