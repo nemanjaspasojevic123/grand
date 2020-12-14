@@ -17,19 +17,19 @@ export const NewPlaylist = () => {
                         </div>
                         <div className="new-playlist-content">
                             <div className="form-group col-md-4">
-                                <label className="new-singles-item-content-label">Title of playlist:</label>
+                                <label className="new-playlist-item-content-label">Title of playlist:</label>
                                 <input type="text" className="form-control" placeholder="Title"/>
-                                <label className="new-singles-item-content-label">YouTube Playlist:</label>
+                                <label className="new-playlist-item-content-label">YouTube Playlist:</label>
                                 <input type="text" className="form-control" placeholder="YouTube Playlist"/>
-                                <label className="new-singles-item-content-label">Deezer Playlist:</label>
+                                <label className="new-playlist-item-content-label">Deezer Playlist:</label>
                                 <input type="text" className="form-control" placeholder="Deezer Playlist"/>
-                                <label className="new-singles-item-content-label">iTunes Playlist:</label>
+                                <label className="new-playlist-item-content-label">iTunes Playlist:</label>
                                 <input type="text" className="form-control" placeholder="iTunes Playlist"/>
-                                <label className="new-singles-item-content-label">Spotify Playlist:</label>
+                                <label className="new-playlist-item-content-label">Spotify Playlist:</label>
                                 <input type="text" className="form-control" placeholder="Spotify Playlist"/>
-                                <label className="new-singles-item-content-label">Amazon Playlist:</label>
+                                <label className="new-playlist-item-content-label">Amazon Playlist:</label>
                                 <input type="text" className="form-control" placeholder="Amazon Playlist"/>
-                                <label className="new-singles-item-content-label">Tidal Playlist:</label>
+                                <label className="new-playlist-item-content-label">Tidal Playlist:</label>
                                 <input type="text" className="form-control" placeholder="Tidal Playlist"/>
                                 <div className="new-artist-image">
                                     <label className="new-artist-content-label">Choose image</label>
