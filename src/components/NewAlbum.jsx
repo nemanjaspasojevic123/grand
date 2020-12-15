@@ -19,50 +19,50 @@ export const NewAlbum = () => {
                         </div>
                         <div className="new-album-content">
                             <div className="form-group col-md-4">
-                                <div className="new-singles-image">
-                                    <label className="new-singles-content-label">Choose image</label>
+                                <div className="new-album-image">
+                                    <label className="new-album-content-label">Choose image</label>
                                     <img src={dummy_img} alt="Tis is dummy_img" style={{height: 200}}></img>
                                     <button type="submit" className="btn btn-secondary btn-title">Add Image</button>
                                     <br></br>
-                                    <label className="new-singles-item-content-label">UPC:</label>
+                                    <label className="new-album-item-content-label">UPC:</label>
                                     <input type="text" className="form-control" placeholder="UPC"/>
-                                    <label className="new-singles-item-content-label">Artist:</label>
+                                    <label className="new-album-item-content-label">Artist:</label>
                                     <input type="text" className="form-control" placeholder="artist"/>
-                                    <label className="new-singles-item-content-label">Title:</label>
+                                    <label className="new-album-item-content-label">Title:</label>
                                     <input type="text" className="form-control" placeholder="Title"/>
-                                    <label className="new-singles-item-content-label">Release date</label>
+                                    <label className="new-album-item-content-label">Release date</label>
                                     <div className="input-group mb-3">
                                         <input className="form-control datetimepicker-input" data-target="#albumReleaseDatePicker" id="albumReleaseDate" name="albumReleaseDate" type="text"></input>
                                         <button className="btn btn-outline-secondary" type="button" id="button-addon2"><i className="fa fa-calendar"></i></button>
                                     </div>
                                     <div>
-                                        <label className="new-singles-item-content-label">Sort priority:</label>
+                                        <label className="new-album-item-content-label">Sort priority:</label>
                                         <input id="frequency" className="form-control" type="number" defaultValue="1000" min="0" max="2000" step="1"></input>
                                     </div>
                                 </div>
                             </div>
                             <div className="form-group col-md-4">
                                 <div>
-                                    <label className="new-singles-item-content-label">Number of tracks:</label>
+                                    <label className="new-album-item-content-label">Number of tracks:</label>
                                     <input id="frequency" className="form-control" type="number" defaultValue="0" min="0" max="1000" step="1"></input>
                                 </div>
-                                <label className="new-singles-item-content-label">Primary genre:</label>
+                                <label className="new-album-item-content-label">Primary genre:</label>
                                 <input type="text" className="form-control" placeholder="primary_genre"/>
-                                <label className="new-singles-item-content-label">GooglePlay:</label>
+                                <label className="new-album-item-content-label">GooglePlay:</label>
                                 <input type="text" className="form-control" placeholder="google_play"/>
-                                <label className="new-singles-item-content-label">Deezer:</label>
+                                <label className="new-album-item-content-label">Deezer:</label>
                                 <input type="text" className="form-control" placeholder="deezer"/>
-                                <label className="new-singles-item-content-label">iTunes:</label>
+                                <label className="new-album-item-content-label">iTunes:</label>
                                 <input type="text" className="form-control" placeholder="itunes"/>
-                                <label className="new-singles-item-content-label">Spotify:</label>
+                                <label className="new-album-item-content-label">Spotify:</label>
                                 <input type="text" className="form-control" placeholder="spotify"/>
-                                <label className="new-singles-item-content-label">Amazon:</label>
+                                <label className="new-album-item-content-label">Amazon:</label>
                                 <input type="text" className="form-control" placeholder="amazon"/>
-                                <label className="new-singles-item-content-label">TIDAL:</label>
+                                <label className="new-album-item-content-label">TIDAL:</label>
                                 <input type="text" className="form-control" placeholder="tidal"/>
                             </div>
                             <div className="form-group col-md-4">
-                                <h3 className="page-title-text">Singles:</h3>
+                                <h3 className="page-title-text">album:</h3>
                                 <button type="submit" className="btn btn-secondary btn-title">
                                     <div>Add single</div>
                                 </button>

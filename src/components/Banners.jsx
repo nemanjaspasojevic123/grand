@@ -38,7 +38,7 @@ const columnDefs = [
                         <div className="page-title">
                             <h1 className="page-title-text">Banners</h1>
                             <button type="submit" className="btn btn-secondary btn-title">
-                                <Link to="/new-banners">
+                                <Link to="/new-banner">
                                     <div>Add New</div>
                                 </Link>
                             </button>

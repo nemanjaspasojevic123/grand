@@ -1,9 +1,9 @@
-.new-banner {
+.new-banner-item {
     display: flex;
     background-color: #fff;
 }
 
-.new-banner-page {
+.new-banner-item-page {
     margin: 0 auto;
     padding: 2%;
     min-width: 80vw;
@@ -19,4 +19,8 @@
 
 .page-title-text {
     padding: 1rem;
+}
+
+.new-banner-form-check {
+    margin-bottom: 1rem;
 }

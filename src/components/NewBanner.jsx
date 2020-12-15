@@ -2,50 +2,43 @@ import React from 'react';
 import '../assets/style/NewBanner.css';
 import { Navbar } from './Navbar';
 import { Sidedashbar } from './Sidedashbar';
-import dummy_img from '../assets/images/dummy-image-landscape.jpg'
+import dummy_img from '../assets/images/dummy-image-landscape.jpg';
 
 export const NewBanner = () => {
     return (
         <>
             <Navbar />
-                <div className="new-banner-item">
+                <div className="new-banner">
                     <Sidedashbar />
-                    <div className="new-banner-item-page">
+                    <div className="new-banner-page">
                         <div className="page-title">
-                            <h1 className="page-title-text">New Ad Banner Item</h1>
-                            <button type="submit" className="btn btn-secondary btn-title">Save</button>
+                            <h1 className="page-title-text">New Banner</h1>
+                            <button type="submit" className="btn btn-secondary btn-title">
+                                    <div>Add New</div>
+                            </button>
                         </div>
-                        <div className="new-banner-item-content">
+                        <div className="new-banner-content">
                             <div className="form-group col-md-4">
-                                <label className="new-banner-item-content-label">Tags</label>
-                                <input type="text" className="form-control posts-search" />
-                                <div className="new-banner-form-check">
-                                    <label className="new-banner-item-content-label">Choose banner type</label>
-                                    <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" defaultChecked/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault1">
-                                    Side wallpaper 9:18
-                                    </label>
-                                    </div>
-                                    <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
-                                    Main banner 4:1
-                                    </label>
-                                    </div>
-                                    <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
-                                    Side banner 4:3
-                                    </label>
-                                    </div>
+                                <label className="new-banner-item-content-label">Starting Date</label>
+                                <div className="input-group mb-3">
+                                    <input type="text" className="form-control" placeholder="12/10/2020" aria-label="12/10/2020" aria-describedby="button-addon2"/>
+                                    <button className="btn btn-outline-secondary" type="button" id="button-addon2"><i className="fa fa-calendar"></i></button>
                                 </div>
-                                <label className="new-banner-item-content-label">Choose image</label>
-                                <img src={dummy_img} alt="Tis is dummy_img" style={{height: 200}}></img>
-                                <button type="submit" className="btn btn-secondary btn-title">Add Image</button>
-                                <div>
-                                    <label className="new-banner-item-content-label">Caption</label>
-                                    <textarea className="form-control" placeholder="This is image caption..."></textarea>
+                                <label className="new-banner-item-content-label">Ending Date</label>
+                                <div className="input-group mb-3">
+                                    <input type="text" className="form-control" placeholder="12/10/2020" aria-label="12/10/2020" aria-describedby="button-addon2"/>
+                                    <button className="btn btn-outline-secondary" type="button" id="button-addon2"><i className="fa fa-calendar"></i></button>
+                                </div>
+                                <label className="new-banner-item-content-label">Link</label>
+                                <input type="text" className="form-control" placeholder="e.g. https://www.google.com"/>
+                                <div className="new-banner-textarea">
+                                    <label className="new-banner-item-content-label">Description:</label>
+                                    <textarea className="form-control" placeholder="Description"></textarea>
+                                </div>
+                                <div className="new-banner-image">
+                                    <label className="new-banner-content-label">Choose banner image</label>
+                                    <img src={dummy_img} alt="Tis is dummy_img" style={{height: 200}}></img>
+                                    <button type="submit" className="btn btn-secondary btn-title">Add Image</button>
                                 </div>
                             </div>
                         </div>

@@ -1,9 +1,9 @@
-.new-banner {
+.new-survey {
     display: flex;
     background-color: #fff;
 }
 
-.new-banner-page {
+.new-survey-page {
     margin: 0 auto;
     padding: 2%;
     min-width: 80vw;
@@ -19,4 +19,12 @@
 
 .page-title-text {
     padding: 1rem;
+}
+
+.new-survey-content-option {
+    display: -webkit-box;
+}
+
+.new-survey-option {
+    width: 85%;
 }

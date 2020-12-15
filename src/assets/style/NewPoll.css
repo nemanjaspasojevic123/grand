@@ -1,9 +1,9 @@
-.new-banner {
+.new-poll {
     display: flex;
     background-color: #fff;
 }
 
-.new-banner-page {
+.new-poll-page {
     margin: 0 auto;
     padding: 2%;
     min-width: 80vw;

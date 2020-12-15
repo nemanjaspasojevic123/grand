@@ -1,9 +1,9 @@
-.new-banner {
+.new-contest {
     display: flex;
     background-color: #fff;
 }
 
-.new-banner-page {
+.new-contest-page {
     margin: 0 auto;
     padding: 2%;
     min-width: 80vw;
