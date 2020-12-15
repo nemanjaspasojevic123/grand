@@ -14,7 +14,7 @@ export const Sidedashbar = () => {
                                     <div className="nav-text"><i className="fa fa-home fa-lg"></i> Dashboard</div>
                                 </Link> 
                             </li>
-                            <hr></hr>
+                            <hr className="sidebar-hr-line"></hr>
                             <li className="nav-item">
                                 <Link to="/posts" className="navLink">
                                     <div className="nav-text"><i className="fa fa-newspaper fa-lg"></i> Posts</div>
@@ -40,7 +40,7 @@ export const Sidedashbar = () => {
                                     <div className="nav-text"><i className="fa fa-crop fa-lg"></i> Ad Banners</div>
                                 </Link>
                             </li>
-                            <hr></hr>
+                            <hr className="sidebar-hr-line"></hr>
                             <li className="nav-item">
                                 <Link to="/notifications" className="navLink">
                                     <div className="nav-text"><i className="fa fa-bell fa-lg"></i> Notifications</div>
@@ -56,7 +56,7 @@ export const Sidedashbar = () => {
                                     <div className="nav-text"><i className="fa fa-calendar-alt fa-lg"></i> Schedule</div>
                                 </Link>
                             </li>
-                            <hr></hr>
+                            <hr className="sidebar-hr-line"></hr>
                             <li className="nav-item">
                                 <Link to="/polls" className="navLink">
                                     <div className="nav-text"><i className="fa fa-chart-pie fa-lg"></i> Polls</div>
@@ -72,8 +72,7 @@ export const Sidedashbar = () => {
                                     <div className="nav-text"><i className="fa fa-image fa-lg"></i> Banners</div>
                                 </Link> 
                             </li>
-                            <hr></hr>
-                            <br></br>
+                            <hr className="sidebar-hr-line"></hr>
                             <li className="nav-item">
                                 <Link to="/new-post" className="navLink">
                                     <div className="nav-text"><i className="fa fa-plus-circle fa-lg"></i> New Post</div>
