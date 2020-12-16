@@ -1,26 +1,58 @@
-.grid-container {
+.positionHome-grid-container {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1.5fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px 10px;
     grid-template-areas:
-      "left centerUp-left centerUp-left centerUp-left centerUp-right right"
-      "left center-first center-second center-third center-fourth right";
+      "positionHome-left positionHome-centerUp-left positionHome-centerUp-left positionHome-centerUp-left positionHome-centerUp-right positionHome-right"
+      "positionHome-left positionHome-center-first positionHome-center-second positionHome-center-third positionHome-center-fourth positionHome-right";
 }
   
-.left { grid-area: left; }
+.positionHome-left { 
+  grid-area: positionHome-left; 
+  border: solid 2px gray;
+}
   
-.right { grid-area: right; }
+.positionHome-right { 
+  grid-area: positionHome-right;
+  border: solid 2px gray; 
+}
   
-.centerUp-left { grid-area: centerUp-left; }
+.positionHome-centerUp-left { 
+  grid-area: positionHome-centerUp-left;
+  border: solid 2px gray;
+}
   
-.centerUp-right { grid-area: centerUp-right; }
+.positionHome-centerUp-right { 
+  grid-area: positionHome-centerUp-right; 
+  border: solid 2px gray;
+}
   
-.center-first { grid-area: center-first; }
+.positionHome-center-first { 
+  grid-area: positionHome-center-first; 
+  border: solid 2px gray;
+}
   
-.center-second { grid-area: center-second; }
+.positionHome-center-second { 
+  grid-area: positionHome-center-second;
+  border: solid 2px gray; 
+}
   
-.center-third { grid-area: center-third; }
+.positionHome-center-third { 
+  grid-area: positionHome-center-third; 
+  border: solid 2px gray;
+}
   
-.center-fourth { grid-area: center-fourth; }
+.positionHome-center-fourth { 
+  grid-area: positionHome-center-fourth; 
+  border: solid 2px gray;
+}
+
+.positionHome-grid-buttons {
+  background-color: #dbdbdb;
+}
+
+.positionHome-grid-btn {
+  margin: 0.5rem 1rem 0.5rem 0.5rem
+}
   
