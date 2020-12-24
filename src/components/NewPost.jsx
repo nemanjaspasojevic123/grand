@@ -65,8 +65,7 @@ export const NewPost = () => {
                                 </select>
                                 <label className="new-post-item-content-label">Date to Publish</label>
                                 <div className="input-group mb-3">
-                                    <input type="text" className="form-control" placeholder="12/10/2020" aria-label="12/10/2020" aria-describedby="button-addon2"/>
-                                    <button className="btn btn-outline-secondary" type="button" id="button-addon2"><i className="fa fa-calendar"></i></button>
+                                    <input type="datetime-local" className="form-control" aria-describedby="button-addon2"/>
                                 </div>
                                 <div className="new-artist-image">
                                 <label className="new-artist-content-label">Choose image</label>

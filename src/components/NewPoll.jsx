@@ -30,13 +30,11 @@ export const NewPoll = () => {
                                 <input type="text" className="form-control" placeholder="https://idjtv.com/video/glasanje"/>
                                 <label className="live-tv-item-content-label">Starting Date</label>
                                 <div className="input-group mb-3">
-                                    <input type="text" className="form-control" placeholder="12/10/2020" aria-label="12/10/2020" aria-describedby="button-addon2"/>
-                                    <button className="btn btn-outline-secondary" type="button" id="button-addon2"><i className="fa fa-calendar"></i></button>
+                                    <input type="datetime-local" className="form-control" aria-describedby="button-addon2"/>
                                 </div>
                                 <label className="live-tv-item-content-label">Ending Date</label>
                                 <div className="input-group mb-3">
-                                    <input type="text" className="form-control" placeholder="12/10/2020" aria-label="12/10/2020" aria-describedby="button-addon2"/>
-                                    <button className="btn btn-outline-secondary" type="button" id="button-addon2"><i className="fa fa-calendar"></i></button>
+                                    <input type="datetime-local" className="form-control" aria-describedby="button-addon2"/>
                                 </div>
                                 <label className="new-singles-item-content-label">Playlist type:</label>
                                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
