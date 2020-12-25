@@ -22,20 +22,20 @@ export const NewAdBanner = () => {
                                 <div className="new-banner-form-check">
                                     <label className="new-banner-item-content-label">Choose banner type</label>
                                     <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" defaultChecked/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault1">
+                                    <input className="new-banner-item-form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" defaultChecked/>
+                                    <label className="new-banner-item-form-check-label" htmlFor="flexRadioDefault1">
                                     Side wallpaper 9:18
                                     </label>
                                     </div>
                                     <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
+                                    <input className="new-banner-item-form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                                    <label className="new-banner-item-form-check-label" htmlFor="flexRadioDefault2">
                                     Main banner 4:1
                                     </label>
                                     </div>
                                     <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
+                                    <input className="new-banner-item-form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                                    <label className="new-banner-item-form-check-label" htmlFor="flexRadioDefault2">
                                     Side banner 4:3
                                     </label>
                                     </div>

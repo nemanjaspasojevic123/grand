@@ -26,8 +26,8 @@ export const NewShow = () => {
                                     <textarea className="form-control" placeholder="Description"></textarea>
                                 </div>
                                 <div className="form-group new-show-checkbox">
-                                    <label className="form-check-label">Is show:</label>
-                                    <input type="checkbox" className="form-check-input" />
+                                    <label className="new-show-form-check-label">Is show:</label>
+                                    <input type="checkbox" className="new-show-form-check-input" />
                                 </div>
                                 <div className="new-show-image">
                                     <label className="new-show-content-label">Choose image</label>
