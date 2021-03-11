@@ -88,7 +88,7 @@ export const NewPost = () => {
                                 <div className="new-artist-image">
                                 <label className="new-artist-content-label">Choose image</label>
                                 <img src={dummy_img} alt="Tis is dummy_img" style={{height: 180}}></img>
-                                <button type="submit" className="btn btn-secondary btn-title col-md-4">Add Image</button>
+                                <button type="submit" className="btn btn-secondary btn-title">Add Image</button>
                                 </div>
                                 <label className="new-post-item-content-label">Select category</label>
                                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
