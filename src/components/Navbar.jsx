@@ -2,6 +2,7 @@ import React from 'react';
 import '../assets/style/Navbar.css';
 import { Link } from 'react-router-dom';
 import grand_logo from '../assets/logos/Grand_TV_logo.png'
+import { authService } from '../services/auth.service';
 
 export const Navbar = () => {
     return (
@@ -21,7 +22,7 @@ export const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/login" ><i className="fa fa-user-circle fa-lg"></i> Log In</Link>
+                                <Link className="nav-link" to="/login" onClick={() => { authService.LogOut()}}><i className="fa fa-user-circle fa-lg"></i> Log Out</Link>
                             </li>
                         </ul>
                     </div>

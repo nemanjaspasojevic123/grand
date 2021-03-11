@@ -1,4 +1,4 @@
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Switch } from 'react-router-dom';
 import './App.css';
 import { AdBanners } from './components/AdBanners';
 import { Banners } from './components/Banners';
@@ -20,6 +20,9 @@ import { NewShow } from './components/NewShow';
 import { NewPoll } from './components/NewPoll';
 import { NewSurvey } from './components/NewSurvey';
 import { NewBanner } from './components/NewBanner';
+import { authService } from './services/auth.service';
+import PublicRoute from './routes/PublicRoute';
+import PrivateRoute from './routes/PrivateRoute';
 
 
 function App() {
@@ -27,27 +30,27 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route component={Login} exact path="/login"></Route>
-          <Route component={Dashboard} exact path="/dashboard"></Route>
-          <Route component={Posts} exact path="/posts"></Route>
-          <Route component={Positions} exact path="/positions"></Route>
-          <Route component={Tags} exact path="/tags"></Route>
-          <Route component={MediaCenter} exact path="/media-center"></Route>
-          <Route component={NewMediaItem} exact path="/new-media-item"></Route>
-          <Route component={AdBanners} exact path="/banners-media-center"></Route>
-          <Route component={NewAdBanner} exact path="/new-banner-media-center"></Route>
-          <Route component={Notifications} exact path="/notifications"></Route>
-          <Route component={Shows} exact path="/shows"></Route>
-          <Route component={NewShow} exact path="/new-show"></Route>
-          <Route component={Shedule} exact path="/schedule"></Route>
-          <Route component={Polls} exact path="/polls"></Route>
-          <Route component={NewPoll} exact path="/new-poll"></Route>
-          <Route component={Surveys} exact path="/surveys"></Route>
-          <Route component={NewSurvey} exact path="/new-survey"></Route>
-          <Route component={Banners} exact path="/banners"></Route>
-          <Route component={NewBanner} exact path="/new-banner"></Route>
-          <Route component={NewPost} exact path="/new-post"></Route>
-          <Redirect from="/" to="dashboard" />    
+          <PublicRoute component={Login} exact path="/login"></PublicRoute>
+          <PrivateRoute component={Dashboard} exact path="/dashboard"></PrivateRoute>
+          <PrivateRoute component={Posts} exact path="/posts"></PrivateRoute>
+          <PrivateRoute component={Positions} exact path="/positions"></PrivateRoute>
+          <PrivateRoute component={Tags} exact path="/tags"></PrivateRoute>
+          <PrivateRoute component={MediaCenter} exact path="/media-center"></PrivateRoute>
+          <PrivateRoute component={NewMediaItem} exact path="/new-media-item"></PrivateRoute>
+          <PrivateRoute component={AdBanners} exact path="/banners-media-center"></PrivateRoute>
+          <PrivateRoute component={NewAdBanner} exact path="/new-banner-media-center"></PrivateRoute>
+          <PrivateRoute component={Notifications} exact path="/notifications"></PrivateRoute>
+          <PrivateRoute component={Shows} exact path="/shows"></PrivateRoute>
+          <PrivateRoute component={NewShow} exact path="/new-show"></PrivateRoute>
+          <PrivateRoute component={Shedule} exact path="/schedule"></PrivateRoute>
+          <PrivateRoute component={Polls} exact path="/polls"></PrivateRoute>
+          <PrivateRoute component={NewPoll} exact path="/new-poll"></PrivateRoute>
+          <PrivateRoute component={Surveys} exact path="/surveys"></PrivateRoute>
+          <PrivateRoute component={NewSurvey} exact path="/new-survey"></PrivateRoute>
+          <PrivateRoute component={Banners} exact path="/banners"></PrivateRoute>
+          <PrivateRoute component={NewBanner} exact path="/new-banner"></PrivateRoute>
+          <PrivateRoute component={NewPost} exact path="/new-post"></PrivateRoute>
+          <Redirect to={authService.isLoged() ? "/dashboard" : "/login"} />    
         </Switch>
       </BrowserRouter>
     </div>

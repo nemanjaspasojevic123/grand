@@ -6,6 +6,7 @@ import 'ag-grid-community/dist/styles/ag-theme-material.css';
 import { Navbar } from './Navbar';
 import { Sidedashbar } from './Sidedashbar';
 import { Link } from 'react-router-dom';
+import { getAllPosts } from '../services/api.services';
 
 export const Posts = () => {
 
@@ -13,19 +14,37 @@ export const Posts = () => {
 // const [gridColumnApi, setGridColumnApi] = useState(null);
 const [filteredArray, setFilteredArray] = useState([]);
 
+useEffect(() => {
+    getAllPosts().then(res => {
+        setRowData(res.data.data)
+        console.log(res.data.data)
+    })
+},[])
+
+const handleDelete = (params) => {
+    console.log(params.data)
+}
+
 // eslint-disable-next-line
     const [rowData, setRowData] = useState([
-        {status: "active", title: "Test singl1", date: "12/06/2020", ident: "test-single1", category: "NEWS"},
-        {status: "draft", title: "Test single2", date: "14/06/2020", ident: "test-single2", category: "TV"},
-        {status: "active", title: "Test single3", date: "20/06/2020", ident: "test-single3", category: "NEWS"}
+        // {status: "active", title: "Test singl1", date: "12/06/2020", ident: "test-single1", category: "NEWS", subcategory: "SHOWBIZZ", edit_tags: "Edit", delete: "Delete"},
+        // {status: "draft", title: "Test single2", date: "14/06/2020", ident: "test-single2", category: "TV", subcategory: "SHOWBIZZ", edit_tags: "Edit", delete: "Delete"},
+        // {status: "active", title: "Test single3", date: "20/06/2020", ident: "test-single3", category: "NEWS", subcategory: "SHOWBIZZ", edit_tags: "Edit", delete: "Delete"}
     ]);
 
     const columnDefs = [
-        {headerName: "Status", field: "status", sortable: true, resizable: true, filter: true},
+        {headerName: "Status", field: "draft", sortable: true, resizable: true, filter: true},
         {headerName: "Title", field: "title", sortable: true, resizable: true, filter: true},
-        {headerName: "Date", field: "date", sortable: true, resizable: true, filter: true},
-        {headerName: "Ident", field: "ident", sortable: true, resizable: true, filter: true},
-        {headerName: "Category", field: "category", sortable: true, resizable: true, filter: true}
+        {headerName: "Date", field: "publish_date", sortable: true, resizable: true, filter: true},
+        {headerName: "Ident", field: "slug", sortable: true, resizable: true, filter: true},
+        {headerName: "Category", field: "post_category.name", sortable: true, resizable: true, filter: true},
+        {headerName: "Subcategory", field: "post_subcategory.name", sortable: true, resizable: true, filter: true},
+        {headerName: "Edit Tags", field: "edit_tags", sortable: true, resizable: true, cellRendererFramework: (params) => {
+            return  <div><button className="btn-secondary"><i className="fa fa-edit"></i> Edit</button></div>
+          }},
+          {headerName: "Delete", field: "delete", sortable: true, resizable: true, cellRendererFramework: (params) => {
+            return  <div><button onClick={()=>handleDelete(params)} className="btn-secondary"><i className="fa fa-trash"></i> Delete</button></div>
+          }},
     ]
 
     useEffect(() => {
@@ -38,11 +57,12 @@ const [filteredArray, setFilteredArray] = useState([]);
             return
         }
         let filteredPosts = rowData.filter(el => 
-            el.status.toLowerCase().includes(e.target.value.toLowerCase()) || 
+            el.draft.toLowerCase().includes(e.target.value.toLowerCase()) || 
             el.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
-            el.date.toLowerCase().includes(e.target.value.toLowerCase()) ||
-            el.ident.toLowerCase().includes(e.target.value.toLowerCase()) ||
-            el.category.toLowerCase().includes(e.target.value.toLowerCase()));
+            el.publish_date.toLowerCase().includes(e.target.value.toLowerCase()) ||
+            el.slug.toLowerCase().includes(e.target.value.toLowerCase()) ||
+            el.post_category.name.toLowerCase().includes(e.target.value.toLowerCase()) || 
+            el.post_subcategory.name.toLowerCase().includes(e.target.value.toLowerCase()));
         setFilteredArray(filteredPosts)
     }
 
