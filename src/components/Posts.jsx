@@ -12,6 +12,7 @@ export const Posts = () => {
 
 // const [gridApi, setGridApi] = useState(null);
 // const [gridColumnApi, setGridColumnApi] = useState(null);
+const [array, setArray] = useState([]);
 const [filteredArray, setFilteredArray] = useState([]);
 
 useEffect(() => {
@@ -49,15 +50,20 @@ const handleDelete = (params) => {
 
     useEffect(() => {
         setFilteredArray(rowData);
+        setArray(rowData)
+        return (() => {
+            setFilteredArray(null)
+            setArray(null)
+        })
     }, [rowData])
 
     const handleInput = (e) => {
         if (e.target.value === ''){
-            setFilteredArray(rowData)
+            setFilteredArray(array)
             return
         }
-        let filteredPosts = rowData.filter(el => 
-            el.draft.toLowerCase().includes(e.target.value.toLowerCase()) || 
+        let filteredPosts = array.filter(el => 
+            el.draft.toString().toLowerCase().includes(e.target.value.toLowerCase()) || 
             el.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
             el.publish_date.toLowerCase().includes(e.target.value.toLowerCase()) ||
             el.slug.toLowerCase().includes(e.target.value.toLowerCase()) ||

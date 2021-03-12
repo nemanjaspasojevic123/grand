@@ -6,6 +6,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import dummy_img from '../assets/images/dummy-image-landscape.jpg';
 import { getAllCategories } from '../services/api.services';
+import moment from "moment";
 
 export const NewPost = () => {
     
@@ -15,14 +16,29 @@ export const NewPost = () => {
 
     useEffect(() => {
         getAllCategories().then(res => {
-            setCategories(res.data.data)
-            setSubcategories(res.data.data[0].children)
-            // console.log(res.data.data)
+            console.log(res.data.data)
+            // setSubcategories(res.data.data[0].children)
+            for(let i = 0; i < res.data.data.length; i++){
+                setCategories(prev => [...prev, res.data.data[i]])
+            }
         })
     },[])
 
+    const subcategoriesArr = (index, categories, setSubcategories) => {
+        let i = parseInt(index)
+    for(let j = 0; j < categories[i].children.length; j++){
+    setSubcategories(prev => [...prev, categories[i].children[j]])
+    }
+    console.log(categories[i])
+    }
+
+    const handleCategorie = (e, categories, setSubcategories) => {
+        setSubcategories([]);
+        subcategoriesArr(e.target.value, categories, setSubcategories)
+    }
+
     const handleDate = (e) => {
-        console.log(e.target.value)
+        console.log(moment().format('YYYY-DD-MM h:mm:ss'))
     }
 
 
@@ -83,7 +99,7 @@ export const NewPost = () => {
                                 </select>
                                 <label className="new-post-item-content-label">Date to Publish</label>
                                 <div className="input-group mb-3">
-                                    <input type="datetime-local" onChange={(e) => handleDate(e)} className="form-control" aria-describedby="button-addon2"/>
+                                    <input type="datetime-local" step="1" onChange={(e) => handleDate(e)} className="form-control" aria-describedby="button-addon2"/>
                                 </div>
                                 <div className="new-artist-image">
                                 <label className="new-artist-content-label">Choose image</label>
@@ -91,9 +107,9 @@ export const NewPost = () => {
                                 <button type="submit" className="btn btn-secondary btn-title">Add Image</button>
                                 </div>
                                 <label className="new-post-item-content-label">Select category</label>
-                                <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" onChange={(e) => handleCategorie(e, categories, setSubcategories)}>
                                     <option defaultValue>Izaberite kategoriju</option>
-                                    {categories.map(el => {return <option key={el.id}>{el.name}</option>})}
+                                    {categories.map((el, i) => {return <option value={i} key={el.id}>{el.name}</option>})}
                                 </select>
                                 <label className="new-post-item-content-label">Select subcategory</label>
                                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
