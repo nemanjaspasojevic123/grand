@@ -18,7 +18,6 @@ const [filteredArray, setFilteredArray] = useState([]);
 useEffect(() => {
     getAllPosts().then(res => {
         setRowData(res.data.data)
-        console.log(res.data.data)
     })
 },[])
 

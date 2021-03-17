@@ -5,7 +5,7 @@ import { Sidedashbar } from './Sidedashbar';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import dummy_img from '../assets/images/dummy-image-landscape.jpg';
-import { getAllCategories } from '../services/api.services';
+import { getAllCategories, getAllPostTypes, getAllSurveys } from '../services/api.services';
 import moment from "moment";
 
 export const NewPost = () => {
@@ -13,14 +13,27 @@ export const NewPost = () => {
 
     const [categories, setCategories] = useState([]);
     const [subcategories, setSubcategories] = useState([]);
+    const [postTypes, setPostTypes] = useState([]);
+    const [surveys, setSurveys] = useState([]);
+    const [title, setTitle] = useState('');
+    const [slug, setSlug] = useState('');
+    const [leadParagraph, setLeadParagraph] = useState('');
+    const [author, setAuthor] = useState('');
+    const [source, setSource] = useState('');
+    const [postType, setPostType] = useState('');
+    const [date, setDate] = useState('');
 
     useEffect(() => {
         getAllCategories().then(res => {
-            console.log(res.data.data)
-            // setSubcategories(res.data.data[0].children)
             for(let i = 0; i < res.data.data.length; i++){
                 setCategories(prev => [...prev, res.data.data[i]])
             }
+        })
+        getAllPostTypes().then(res => {
+            setPostTypes(res.data.data)
+        })
+        getAllSurveys().then(res => {
+            setSurveys(res.data.data)
         })
     },[])
 
@@ -28,9 +41,7 @@ export const NewPost = () => {
         let i = parseInt(index)
     for(let j = 0; j < categories[i].children.length; j++){
     setSubcategories(prev => [...prev, categories[i].children[j]])
-    }
-    console.log(categories[i])
-    }
+    }}
 
     const handleCategorie = (e, categories, setSubcategories) => {
         setSubcategories([]);
@@ -38,7 +49,43 @@ export const NewPost = () => {
     }
 
     const handleDate = (e) => {
-        console.log(moment().format('YYYY-DD-MM h:mm:ss'))
+        setDate(moment(e.target.value).format('YYYY-DD-MM h:mm:ss'))
+    }
+    const handleTitle = (e) => {
+        setTitle(e.target.value)
+    }
+    const handleSlug = (e) => {
+        setSlug(e.target.value)
+    }
+    const handleLeadParagraph = (e) => {
+        setLeadParagraph(e.target.value)
+    }
+    const handleAuthor = (e) => {
+        setAuthor(e.target.value)
+    }
+    const handleSource = (e) => {
+        setSource(e.target.value)
+    }
+    const handlePostType = (e) => {
+        setPostType(e.target.value)
+    }
+
+    let newPost = {
+        title: title,
+        slug: slug,
+        lead_paragraph: leadParagraph,
+        author: author,
+        source: source,
+        publish_date: date,
+        post_type: postType,
+        // text: text,
+        // age_restricted: age_restricted,
+        // post_category: post_category,
+        // post_subcategory: post_subcategory,
+    }
+
+    const handleCreatePost = (e) => {
+        console.log(newPost)
     }
 
 
@@ -52,50 +99,37 @@ export const NewPost = () => {
                             <h1 className="page-title-text">New Post</h1>
                             <div>
                             <button type="button" className="btn btn-secondary btn-title">Save Draft</button>
-                            <button type="button" className="btn btn-secondary btn-title">Create</button>
+                            <button type="button" className="btn btn-secondary btn-title" onClick={(e) => handleCreatePost(e)}>Create</button>
                             </div>
                         </div>
                         <div className="new-post-content">
                             <div className="form-group col-md-9">
                                 <label className="new-post-item-content-label">Title</label>
-                                <input type="text" className="form-control" placeholder="Post Title"/>
+                                <input type="text" className="form-control" placeholder="Post Title" onChange={(e) => handleTitle(e)}/>
                                 <label className="new-post-item-content-label">Slug</label>
-                                <input type="text" className="form-control" placeholder="this-is-amazing"/>
+                                <input type="text" className="form-control" placeholder="this-is-amazing" onChange={(e) => handleSlug(e)}/>
                                 <label className="new-post-item-content-label">Lead paragraph</label>
-                                <input type="text" className="form-control" placeholder="Lead paragraph"/>
+                                <input type="text" className="form-control" placeholder="Lead paragraph" onChange={(e) => handleLeadParagraph(e)}/>
                                 <label className="new-post-item-content-label">Author</label>
-                                <input type="text" className="form-control" placeholder="Author"/>
+                                <input type="text" className="form-control" placeholder="Author" onChange={(e) => handleAuthor(e)}/>
                                 <label className="new-post-item-content-label">Source</label>
-                                <input type="text" className="form-control" placeholder="Source"/>
+                                <input type="text" className="form-control" placeholder="Source" onChange={(e) => handleSource(e)}/>
                                 <div className="ckeditor">
                                 <CKEditor
                                     editor={ ClassicEditor }
-                                    data="<p>Hello from CKEditor 5!</p>"
-                                    // onReady={ editor => {
-                                    //     // You can store the "editor" and use when it is needed.
-                                    //     console.log( 'Editor is ready to use!', editor );
-                                    // } }
+                                    data=''
                                     onChange={ ( event, editor ) => {
                                         const data = editor.getData();
                                         console.log( { event, editor, data } );
-                                    } }
-                                    onBlur={ ( event, editor ) => {
-                                        console.log( 'Blur.', editor );
-                                    } }
-                                    onFocus={ ( event, editor ) => {
-                                        console.log( 'Focus.', editor );
                                     } }
                                     />
                                 </div>
                             </div> 
                             <div className="form-group col-md-3">
                                 <label className="new-post-item-content-label">Select post type</label>
-                                <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" onChange={(e) => handlePostType(e)}>
                                     <option defaultValue>Post Type</option>
-                                    <option value="1">TEXT</option>
-                                    <option value="2">VIDEO</option>
-                                    <option value="3">SINGLE</option>
-                                    <option value="4">YOUTUBE THUMB</option>
+                                    {postTypes.map(el => {return <option key={el.id}>{el.name}</option>})}
                                 </select>
                                 <label className="new-post-item-content-label">Date to Publish</label>
                                 <div className="input-group mb-3">
@@ -108,20 +142,18 @@ export const NewPost = () => {
                                 </div>
                                 <label className="new-post-item-content-label">Select category</label>
                                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" onChange={(e) => handleCategorie(e, categories, setSubcategories)}>
-                                    <option defaultValue>Izaberite kategoriju</option>
+                                    <option defaultValue>Category</option>
                                     {categories.map((el, i) => {return <option value={i} key={el.id}>{el.name}</option>})}
                                 </select>
                                 <label className="new-post-item-content-label">Select subcategory</label>
                                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                    <option defaultValue>Izaberite podkategoriju</option>
+                                    <option defaultValue>Subcategory</option>
                                     {subcategories.map(el => {return <option key={el.id}>{el.name}</option>})}
                                 </select>
                                 <label className="new-post-item-content-label">Select survey</label>
                                 <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                     <option defaultValue>Survey</option>
-                                    <option value="1">option1</option>
-                                    <option value="2">option2</option>
-                                    <option value="3">option3</option>
+                                    {surveys.map(el => {return <option key={el.id}>{el.title}</option>})}
                                 </select>
                                 <label className="new-post-item-content-label">Related tag</label>
                                 <input type="text" className="form-control"/>

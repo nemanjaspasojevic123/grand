@@ -13,3 +13,9 @@ export const logInUser = (username, password) => axios.post(baseURL+"/login", {u
 export const getAllPosts = () => axios.get(baseURL+"/posts", getHeader());
 
 export const getAllCategories = () => axios.get(baseURL+"/post-categories", getHeader());
+
+export const getAllPostTypes = () => axios.get(baseURL+"/post-types", getHeader());
+
+export const getAllSurveys = () => axios.get(baseURL+"/surveys", getHeader());
+
+export const createNewPost = (newPost) => axios.post(baseURL+"/posts", {newPost}, getHeader())
